@@ -1,12 +1,18 @@
 class Robot{
+ int currentPosition = 0;
+
  public static void main(String[] args){
   Robot robot = new Robot();
-  robot.greeting("Hello");
-  robot.greeting("Bye");
+  robot.report();
+  robot.moveForward();
+  robot.report();
  }
 
- void greeting(String msg){
-  System.out.println(msg);
+ void report(){
+  System.out.println("Current Position = " + currentPosition);
  }
 
+ void moveForward(){
+  currentPosition = currentPosition + 1;
+ }
 }
