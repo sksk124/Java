@@ -1,23 +1,17 @@
-public class MaxCalc {
- public static int max(int a, int b, int c) {
-  int max = a;
-  if(max < b){
-   max = b;
-  }
-  if(max < c){
-   max = c;
-  }
-  return max;
- }
-
- public static void main(String[] args){
-  int[]japaneseScore = new int[3];
-  japaneseScore[0] = 84;
-  japaneseScore[1] = 92;
-  japaneseScore[2] = 76;
-
-  int maxJapaneseScore = max(japaneseScore[0],japaneseScore[1],japaneseScore[2]);
-
-  System.out.println("国語の最大点数は" + maxJapaneseScore + "点です。");
- }
+public class Main {
+  public static void main(String[] args) {
+      System.out.print("【数当てゲーム】");
+      int ans = new java.util.Random() .nextInt(10);
+      for (int i = 0; i < 5; i++) {
+          System.out.println("0~9の数字を入力してください");
+          int num = new java.util.Scanner(System.in) .nextInt();
+          if (ans == num) {
+              System.out.println("アタリ！");
+              break;
+          } else {
+              System.out.println("違います");
+          }
+      }
+      System.out.println("ゲームを終了します");
+   }
 }
